@@ -1,0 +1,9 @@
+{
+  "defaultCommandTimeout": 6000,
+  "pageLoadTimeout": 10000,
+  "reporter": "mochawesome",
+  "env": {
+    "url": "https://rahulshettyacademy.com/"
+  },
+  "projectId": "3rs57f"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest" : "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashBoardTest":"npm run test -- --record --key 51740c36-a19a-4e1a-8e57-82d85d241954 --reporter mochawesome",
+    "GreenKartTest" : "npm run test -- --spec \"cypress/integration/examples/Greenkart/*\"",
+    "PracticeTest" : "npm run test -- --spec \"cypress/integration/examples/Practice/*\""    
+  },
+  "author": "Vinod Kumbar",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.10.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.0.1",
+    "mochawesome": "^6.1.1"
+  }
+}

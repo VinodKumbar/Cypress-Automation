@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-07-26T11:46:25.769Z",
+    "end": "2020-07-26T11:47:05.904Z",
+    "duration": 40135,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "acd88493-3f64-4b4f-8e89-9d93cc132af6",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\Practice\\WebTables_MouseHover.js",
+      "file": "cypress\\integration\\examples\\Practice\\WebTables_MouseHover.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6700f2b6-169d-4893-8172-7d40f59d7343",
+          "title": "My Fourth Test Suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My Fourth Test Case",
+              "fullTitle": "My Fourth Test Suit My Fourth Test Case",
+              "timedOut": null,
+              "duration": 19507,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\ncy.get('tr td:nth-child(2)').each(function ($el, index, $list) {\n  var text = $el.text();\n  if (text.includes('Python')) {\n    cy.get('tr td:nth-child(2)').eq(index).next().then(function (price) {\n      var priceText = price.text();\n      expect(priceText).to.equal('25');\n    });\n  }\n}); // mouse hover - one way\ncy.get(\"div mouse-hover-content\").invoke('show');\ncy.contains('Top').click();\ncy.url().should('include', 'top'); // mouse hover - another way\ncy.contains('Top').click({\n  force: true\n});\ncy.url().should('include', 'top');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:155493:13)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:156469:16\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10130:23)\n    at https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:5252:41\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:10130:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8065:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8122:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8167:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8243:18)\n    at _drainQueueStep (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4837:12)\n    at _drainQueue (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4830:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4846:5)\n    at Async.drainQueues (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:4716:14)\nFrom Your Spec Code:\n    at Context.eval (https://rahulshettyacademy.com/__cypress/tests?p=cypress\\integration\\examples\\Practice\\WebTables_MouseHover.js:7:8)",
+                "diff": null
+              },
+              "uuid": "8cb04c9c-f348-4d0d-a733-37ef90e9c69f",
+              "parentUUID": "6700f2b6-169d-4893-8172-7d40f59d7343",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8cb04c9c-f348-4d0d-a733-37ef90e9c69f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19507,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}
